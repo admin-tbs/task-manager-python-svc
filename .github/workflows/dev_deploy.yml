@@ -23,7 +23,7 @@ jobs:
 
       -name: Install Requirement
       run: |
-      pip install -r requirement.txt
+      echo "pip install -r requirement.txt"
 
       -name: Deployment
       run: |
