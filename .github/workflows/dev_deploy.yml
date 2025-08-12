@@ -21,9 +21,9 @@ jobs:
       with:
         python-version:"3.12"
 
-      -name: Install Requirement
-      run: |
-      echo "pip install -r requirement.txt"
+      # -name: Install Requirement
+      # run: |
+      # echo "pip install -r requirement.txt"
 
       -name: Deployment
       run: |
