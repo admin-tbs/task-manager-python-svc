@@ -1,0 +1,34 @@
+name: Task Manager Pipeline
+
+on: 
+  push:
+    branches:
+      - task_manager_v1
+  pull_request:
+    branches:
+      - task_manager_v1
+
+jobs:
+  task-manager-deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      -name: CheckOut Code
+      uses: actions/checkout@v4
+
+      -name: Setup-Python
+      uses: action/setup-python@v5
+      with:
+        python-version:"3.12"
+
+      -name: Install Requirement
+      run: |
+      pip install -r requirement.txt
+
+      -name: Deployment
+      run: |
+      echo "Started the Deployment"
+      echo "Deployment In Progress"
+      echo "Deployment Completed"
+
+      
